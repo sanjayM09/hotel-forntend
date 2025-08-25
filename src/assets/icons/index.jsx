@@ -9,7 +9,7 @@ import NoData from '@assets/icons/NoData.svg'
 
 export const Svgicons = {
     ROOMBOOKING: roomBooking,
-MULTIROOMBOOKING: MultipleRoomBooking,
+    MULTIROOMBOOKING: MultipleRoomBooking, // ✅ same name
     MAINTANANCE:maitanance,
     CLEANINGSTATUS:cleaningStatus,
     ROOMVACATE:roomVacate,

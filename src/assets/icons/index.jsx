@@ -1,5 +1,5 @@
 import roomBooking from '@assets/icons/roomBooking.svg'
-import MultipleRoomBooking from './MultipleRoomBooking.svg'
+import MultipleRoomBooking from './multipleRoomBooking.svg'
 import maitanance from '@assets/icons/maintanceadd.svg'
 import cleaningStatus from '@assets/icons/cleanstatuschange.svg'
 import roomVacate from '@assets/icons/Roomvacate.svg'
@@ -9,7 +9,7 @@ import NoData from '@assets/icons/NoData.svg'
 
 export const Svgicons = {
     ROOMBOOKING: roomBooking,
-    MULTIROOMBOOKING:multiRoomBooking,
+MULTIROOMBOOKING: MultipleRoomBooking,
     MAINTANANCE:maitanance,
     CLEANINGSTATUS:cleaningStatus,
     ROOMVACATE:roomVacate,

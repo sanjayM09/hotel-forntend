@@ -30,25 +30,31 @@
 
 #//////////////////////////////#
 
+# Step 1: Build Stage
 FROM node:20-alpine AS build
 WORKDIR /app
 
+# Copy only package files first
 COPY package*.json ./
 
-# Install deps with clean install & ensure binaries executable
-RUN npm ci && chmod +x node_modules/.bin/*
+# Clean install ensures fresh Linux binaries
+RUN npm ci
 
+# Copy the rest of the source
 COPY . .
 
-# Debug logs before build
-RUN ls -la node_modules/.bin && npx vite --version
+# Ensure vite binary is executable
+RUN chmod +x node_modules/.bin/vite
 
 # Build project
-RUN npm run build
+RUN npx vite build
+# or RUN npm run build
 
+# Step 2: Nginx Stage
 FROM nginx:alpine
 WORKDIR /usr/share/nginx/html
 RUN rm -rf ./*
 COPY --from=build /app/dist .
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
+

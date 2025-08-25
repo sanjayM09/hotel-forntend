@@ -1,0 +1,18 @@
+name: Development
+on:
+  push:
+    branches: [ dev ]
+
+jobs:
+  build:
+    runs-on: ideaux-dev
+   
+    steps:
+      - name: Clone Repository
+        uses: actions/checkout@v3
+        with:
+          path: "dev"
+         
+      - name: Install Packages & Setup
+        run: |
+         sudo service nginx restart

@@ -42,6 +42,9 @@ RUN npm install
 # Copy all source
 COPY . .
 
+# Fix permission issue for scripts
+RUN chmod -R +x node_modules/.bin
+
 # Build production (creates dist/)
 RUN npm run build
 

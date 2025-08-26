@@ -1,4 +1,4 @@
-import roomBooking from '@assets/icons/roomBooking.svg'
+import roomBooking from '@assets/icons/roombooking.svg'
 import MultipleRoomBooking from './multipleroombooking.svg'
 import maitanance from '@assets/icons/maintanceadd.svg'
 import cleaningStatus from '@assets/icons/cleanstatuschange.svg'

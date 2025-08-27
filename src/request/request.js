@@ -7,7 +7,7 @@ const baseURLs = {
 };
 
 // const environment = process.env.NODE_ENV || 'development';
-console.log(environment,'environment');
+// console.log(environment,'environment');
 const environment = 'production';
 
 export const baseRequest = axios.create({
